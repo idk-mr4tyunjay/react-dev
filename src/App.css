@@ -6,3 +6,11 @@
     font-size: x-large;
     font-weight: bold;
 }
+.button-custom{
+    background-color: #392CCD;
+    color: white;
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+}

@@ -4,7 +4,7 @@ import { Chart, BarElement, CategoryScale, LinearScale } from 'chart.js';
 // Register necessary elements for the bar chart
 Chart.register(BarElement, CategoryScale, LinearScale);
 
-const ProgressBar = ({ value }) => {
+const SaleBar = ({ data, color, bgcol }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -17,9 +17,9 @@ const ProgressBar = ({ value }) => {
         data: {
           labels: ['Progress'], // Single label for the progress bar
           datasets: [{
-            data: [value], // The progress value
-            backgroundColor: 'rgba(76, 175, 80, 0.8)', // Green color
-            borderColor: 'rgba(76, 175, 80, 1)', // Border color
+            data: [data], // The progress value
+            backgroundColor: [color], // Green color
+            borderColor: [bgcol], // Border color
             borderWidth: 1
           }]
         },
@@ -28,7 +28,7 @@ const ProgressBar = ({ value }) => {
           scales: {
             x: {
               beginAtZero: true, // Start the bar from zero
-              max: 356, // Maximum value for the bar
+              max: 256, // Maximum value for the bar
               display: false // Hide the scale
             },
             y: {
@@ -53,7 +53,7 @@ const ProgressBar = ({ value }) => {
         progressChart.destroy();
       };
     }
-  }, [value]); // Re-run effect if 'value' changes
+  }, [data]); // Re-run effect if 'data' changes
 
   return (
     <div 
@@ -79,4 +79,4 @@ const ProgressBar = ({ value }) => {
   );
 };
 
-export default ProgressBar;
+export default SaleBar;

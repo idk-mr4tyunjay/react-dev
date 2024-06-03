@@ -1,21 +1,17 @@
-import React from 'react'
-import './App.css'
-import Navbar from './components/Navbar'
-import ProjectStatus from './components/projectStatus/ProjectStatus'
-import Device from './components/deviceStats/Device'
-import Sessions from './components/session/Sessions'
-import Events from './components/events/Events'
+import React from "react";
+import "./App.css";
+import AdminPanel from "./Pages/AdminPanel";
+// import Sidebar2 from "./components/navbar/Sidebar2";
+import Sidebar from "./components/navbar/Sidebar";
 
 const App = () => {
   return (
-    <>
-    <div className='bg-custom'><Navbar /></div>
-    <Events/>
-    <Sessions />
-    <Device />
-    <ProjectStatus />
-    </>
-  )
-}
+    <div className="overflow-x-hidden"> 
+      {/* <Sidebar2 /> */}
+      <Sidebar/>
+      <AdminPanel />
+    </div>
+  );
+};
 
-export default App
+export default App;

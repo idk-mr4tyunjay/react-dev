@@ -14,3 +14,18 @@
     border: none;
     border-radius: 7px;
 }
+.badge-custom {
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.75em;
+  }
+
+  .responsive{
+    flex-direction: row;
+  }
+  @media screen and (max-width: 768px) {
+.responsive{
+  flex-direction: column;
+}
+  }

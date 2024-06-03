@@ -3,21 +3,20 @@ import ProgressBar from "./ProgressBar";
 
 const Device = () => {
   return (
-    <div className="col-xl-4 d-flex grid-margin stretch-card">
-      <div className="card">
+      <div className="card stretch-card">
         <div className="card-body">
-          
           <h5 className="card-title mb-2">Device Stats</h5>
-          <DeviceInfo label="Uptime" value="195 Days, 8 hours" />
-          <DeviceInfo label="First Seen" value="23 Sep 2019, 2.04PM" />
-          <DeviceInfo label="Collected Time" value="23 Sep 2019, 2.04PM" />
-          <DeviceInfo label="Memory Space" value="168.3GB" />
+         <div className=" px-2 mb-3">
+            <DeviceInfo label="Uptime" value="195 Days, 8 hours" />
+            <DeviceInfo label="First Seen" value="23 Sep 2019, 2.04PM" />
+            <DeviceInfo label="Collected Time" value="23 Sep 2019, 2.04PM" />
+            <DeviceInfo label="Memory Space" value="168.3GB" />
+         </div>
           <div className="mt-4">
             <ProgressBar value={168.3} />
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

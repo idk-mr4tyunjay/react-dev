@@ -4,8 +4,7 @@ import SaleBar from "./SaleBar";
 
 const Sale = () => {
   return (
-    <div className="col-lg-4 d-flex grid-margin stretch-card">
-      <div className="card">
+    <div className="card stretch-card">
         <div className="card-body">
           <div className="d-flex flex-wrap justify-content-between">
             <h4 className="card-title mb-3">Sale Analysis Trend</h4>
@@ -33,7 +32,6 @@ const Sale = () => {
           </div>
           <SalePlot />
         </div>
-      </div>
     </div>
   );
 };

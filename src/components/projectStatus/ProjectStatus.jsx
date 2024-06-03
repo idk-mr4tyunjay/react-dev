@@ -3,8 +3,7 @@ import projectData from "./projectData.json";
 
 const ProjectStatus = () => {
   return (
-    <div className="col-lg-8 d-flex grid-margin stretch-card">
-      <div className="card">
+    <div className="card stretch-card">
         <div className="card-body">
           <div className="justify-content-between">
             <h5 className="card-title">Project status</h5>
@@ -55,7 +54,6 @@ const ProjectStatus = () => {
             </table>
           </div>
         </div>
-      </div>
     </div>
   );
 };

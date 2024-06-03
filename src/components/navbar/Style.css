@@ -90,6 +90,7 @@
 .wrapper {
     display: flex;
 }
+/* Sidebar styling */
 .sidebar {
     position: fixed;
     top: 0;
@@ -106,6 +107,7 @@
     left: 0;
   }
   
+  /* Main content styling */
   .main {
     margin-left: 0;
     transition: margin-left 0.3s ease;
@@ -114,5 +116,6 @@
   .main.open {
     margin-left: 250px;
   }
+  
   
   

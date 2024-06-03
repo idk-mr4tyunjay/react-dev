@@ -3,7 +3,7 @@ import CircleProgress from "./CircleProgress";
 
 const Sessions = () => {
   return (
-    <div className="card stretch-card">
+    <div className="card stretch-card ">
       <h5 className="card-title p-3">Sessions</h5>
       <div className="d-flex align-items-center">
         <div className="card-body d-flex align-items-center">

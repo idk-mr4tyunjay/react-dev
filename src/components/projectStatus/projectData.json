@@ -1,34 +1,34 @@
 [
     {
-      "logo": "public/volks.png",
+      "logo": "./src/Assets/volks.png",
       "company": "Volkswagen",
       "budget": "$2322",
       "status": "88%",
       "deadline": "07 Nov 2019"
     },
     {
-      "logo": "public/land.png",
+      "logo": "./src/Assets/land.png",
       "company": "Land Rover",
       "budget": "$12022",
       "status": "70%",
       "deadline": "08 Nov 2019"
     },
     {
-        "logo": "public/bentley.png",
+        "logo": "./src/Assets/bentley.png",
         "company": "Bentley",
         "budget": "$8725",
         "status": "87%",
         "deadline": "11 Jun 2019"
       },
       {
-        "logo": "public/morgan.png",
+        "logo": "./src/Assets/morgan.png",
         "company": "Morgan",
         "budget": "$5220",
         "status": "65%",
         "deadline": "26 Oct 2019"
       },
       {
-        "logo": "public/volks.png",
+        "logo": "./src/Assets/volks.png",
         "company": "Volkswagen",
         "budget": "$2322",
         "status": "88%",

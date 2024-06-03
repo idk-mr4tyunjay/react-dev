@@ -20,12 +20,40 @@
     color: white;
     font-size: 0.75em;
   }
+.line{
+  background-color: red;
+  height: 1px;
+}
+.bg-dashboard{
+  background-color: #414147;
+}
 
-  .responsive{
+.responsive{
     flex-direction: row;
   }
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 .responsive{
   flex-direction: column;
 }
   }
+
+@media screen and (max-width: 768px) {
+.responsive-project{
+  width: 100%;
+}
+  }
+
+.new-logo{
+  color: #F2125E;
+}
+
+.my-link {
+  text-decoration: none; /* Remove underline by default */
+  transition: text-decoration 0.3s, font-weight 0.3s; /* Add a transition for smooth effect */
+}
+
+.my-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+  font-weight: bold; /* Make text bold on hover */
+}
+

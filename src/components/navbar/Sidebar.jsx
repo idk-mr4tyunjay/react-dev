@@ -26,7 +26,7 @@ const Sidebar = ({ children }) => {
   return (
     <div className={`app-container ${isOpen ? "sidebar-open" : ""}`}>
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
-        <div className="bg-light py-3 border-end">
+        <div className="bg-light py-3 ">
           <button className="sidebar-toggle mb-2 mt-2" onClick={toggleSidebar}>
             <FaBars className="sidebar-icon-bars" />
           </button>
@@ -36,11 +36,11 @@ const Sidebar = ({ children }) => {
           </a>
         </div>
         <div className="container-fluid py-3">
-          <form className="d-flex position-relative" role="search">
+          <form className="d-flex position-relative " role="search">
             <input
-              className="form-control me-2 search-input"
+              className="form-control me-2 search-input no-border-radius"
               type="search"
-              placeholder="Search"
+              placeholder="Type to search"
               aria-label="Search"
             />
             <button className="search-button" type="submit">
@@ -51,8 +51,8 @@ const Sidebar = ({ children }) => {
         <span className="fw-lighter px-2">Dash Menu</span>
         <ul className="sidebar-menu">
           <li className="sidebar-item bg-dashboard">
-            <a href="#" className="sidebar-link">
-              <HiComputerDesktop />
+            <a href="#" className="sidebar-link py-2">
+              <HiComputerDesktop style={{ color: '#2B80FF' }} />
               <span className="sidebar-text px-1 fw-bold">Dashboard</span>
               <span className="new-label">NEW</span>
             </a>

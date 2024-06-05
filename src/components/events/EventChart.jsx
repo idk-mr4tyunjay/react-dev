@@ -10,52 +10,52 @@ const EventChart = () => {
       const myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September'],
           datasets: [
             {
               label: 'ARA A',
-              data: [25, 59, 40, 81, 56, 55, 40],
+              data: [35, 59, 32, 69, 43, 62, 37, 59, 31],
               fill: true,
               tension: 0.1,
-              borderColor: 'rgba(128, 0, 128, 1)', // Purple
-              backgroundColor: 'rgba(128, 0, 128, 0.2)', // Purple with transparency
+              borderColor: 'rgba(128, 0, 128, 1)', 
+              backgroundColor: 'rgba(128, 0, 128, 0.2)',
               borderWidth: 1,
-              pointRadius: 0 // Remove the points
+              pointRadius: 0 
             },
             {
               label: 'ARA B',
-              data: [20, 49, 35, 71, 46, 45, 30],
+              data: [25, 50, 21, 57, 37, 55, 26, 52, 21],
               fill: true,
               tension: 0.1,
-              borderColor: 'rgba(255, 0, 0, 1)', // Red
-              backgroundColor: 'rgba(255, 0, 0, 0.2)', // Red with transparency
+              borderColor: 'rgba(255, 0, 0, 1)', 
+              backgroundColor: 'rgba(255, 0, 0, 0.2)',
               borderWidth: 1,
-              pointRadius: 0 // Remove the points
+              pointRadius: 0 
             },
             {
               label: 'ARA C',
-              data: [15, 40, 15, 51, 26, 25, 10],
+              data: [15, 40, 12, 47, 22, 43, 13, 40, 12],
               fill: true,
               tension: 0.1,
-              borderColor: 'rgba(255, 190, 0, 1)', // Orange
-              backgroundColor: 'rgba(255, 190, 0, 0.3)', // Orange with transparency
+              borderColor: 'rgba(255, 190, 0, 1)', 
+              backgroundColor: 'rgba(255, 190, 0, 0.2)',
               borderWidth: 1,
-              pointRadius: 0 // Remove the points
+              pointRadius: 0 
             }
           ]
         },
         options: {
           scales: {
             x: {
-              display: false // Hide the x-axis labels
+              display: false
             },
             y: {
-              display: false // Hide the y-axis labels
+              display: false
             }
           },
           plugins: {
             legend: {
-              display: false, // Hide the legend
+              display: false, 
             },
           },
         }

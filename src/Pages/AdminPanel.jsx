@@ -10,12 +10,13 @@ const AdminPanel = () => {
   return (
     <div className="w-100 bg-custom">
               <Navbar />
-      <div className="d-flex row my-3">
+      <div className="d-flex row my-2">
         <div className="d-flex responsive justify-content-around">  
           <Sessions />
           <Events />
           <Device />
         </div>
+        <div className=" my-2 py-3 bg-light"></div>
         <div className="d-flex responsive justify-content-around">
           <Sale />
           <ProjectStatus />

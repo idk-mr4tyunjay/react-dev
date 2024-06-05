@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Chart, BarElement, CategoryScale, LinearScale } from 'chart.js';
 
-// Register necessary elements for the bar chart
 Chart.register(BarElement, CategoryScale, LinearScale);
 
 const ProgressBar = ({ value }) => {
@@ -11,49 +10,47 @@ const ProgressBar = ({ value }) => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext('2d');
 
-      // Create a new Chart instance
       const progressChart = new Chart(ctx, {
-        type: 'bar', // Set the chart type to 'bar'
+        type: 'bar',
         data: {
-          labels: ['Progress'], // Single label for the progress bar
+          labels: ['Progress'], 
           datasets: [{
-            data: [value], // The progress value
-            backgroundColor: 'rgba(76, 175, 80, 0.8)', // Green color
-            borderColor: 'rgba(76, 175, 80, 1)', // Border color
+            data: [value], 
+            backgroundColor: 'rgba(76, 175, 80, 0.8)', 
+            borderColor: 'rgba(76, 175, 80, 1)', 
             borderWidth: 1
           }]
         },
         options: {
-          indexAxis: 'y', // Horizontal bar
+          indexAxis: 'y', 
           scales: {
             x: {
-              beginAtZero: true, // Start the bar from zero
-              max: 356, // Maximum value for the bar
-              display: false // Hide the scale
+              beginAtZero: true, 
+              max: 356, 
+              display: false 
             },
             y: {
-              display: false // Hide the scale
+              display: false 
             }
           },
           plugins: {
             legend: {
-              display: false // Hide the legend
+              display: false 
             },
             tooltip: {
-              enabled: false // Disable tooltips
+              enabled: false 
             }
           },
           responsive: true,
-          maintainAspectRatio: false // Maintain the aspect ratio
+          maintainAspectRatio: false 
         }
       });
 
-      // Cleanup function to destroy chart instance on unmount
       return () => {
         progressChart.destroy();
       };
     }
-  }, [value]); // Re-run effect if 'value' changes
+  }, [value]); 
 
   return (
     <div 

@@ -4,7 +4,7 @@ import projectData from "./projectData.json";
 const ProjectStatus = () => {
   return (
     <div className="card stretch-card">
-      <div className="card-body">
+      <div className="card-body mx-3 px-5">
         <div className="justify-content-between">
           <h5 className="card-title">Project status</h5>
           <div className="table-responsive">
@@ -23,7 +23,7 @@ const ProjectStatus = () => {
                 {projectData.map((project, index) => (
                   <tr key={index}>
                     <td><img style={{ maxWidth: "50px" }} src={project.logo} alt="logo" /></td>
-                    <td>{project.company}</td>
+                    <td >{project.company}</td>
                     <td>{project.budget}</td>
                     <td>{project.status}</td>
                     <td>{project.deadline}</td>

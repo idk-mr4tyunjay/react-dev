@@ -1,10 +1,7 @@
-
-
-  
 .sidebar-toggle {
     position: absolute;
     top: 5px;
-    left: 300px;
+    left: 250px; 
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -16,41 +13,41 @@
 .sidebar-toggle:focus {
     outline: none;
 }
-  
+
 .sidebar-menu {
     padding: 0;
     list-style: none;
 }
-  
+
 .sidebar-item {
     padding: 10px;
 }
-  
+
 .sidebar-link {
     color: #fff;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
-  
+
 .sidebar-link:hover {
     color: #ccc;
 }
-  
+
 .sidebar-icon-bars {
     color: #000000;
     margin-top: 9px;
     font-size: 1.5rem;
 }
-  
+
 .sidebar-icon-right {
     margin-left: auto;
 }
-  
+
 .sidebar-text {
     flex-grow: 1;
 }
-  
+
 .new-label {
     background-color: #F2125E;
     color: white;
@@ -59,18 +56,18 @@
     font-size: 0.75rem;
     margin-left: 10px;
 }
-  
+
 .search-input {
     background-color: transparent;
     border: 1px solid #ccc;
     color: #fff;
     padding-left: 10px;
 }
-  
+
 .search-input::placeholder {
     color: #ccc;
 }
-  
+
 .search-button {
     background: none;
     border: none;
@@ -81,41 +78,95 @@
     transform: translateY(-50%);
     cursor: pointer;
 }
-  
+
 .search-icon {
     font-size: 1.2rem;
 }
 
-
 .wrapper {
     display: flex;
 }
-/* Sidebar styling */
+
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; 
     width: 250px;
     height: 100%;
     background-color: #1b1b29;
     color: #fff;
-    transition: all 0.3s ease;
-    z-index: 3;
-  }
-  
-  .sidebar.open {
-    left: 0;
-  }
-  
-  /* Main content styling */
-  .main {
+    transition: left 0.3s ease; 
+    z-index: 1040;
+}
+
+.sidebar.open {
+    left: 0; 
+}
+
+.main {
     margin-left: 0;
     transition: margin-left 0.3s ease;
+}
+
+.main.open {
+    margin-left: 250px; 
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    transition: all 0.3s;
+}
+
+.sidebar-toggle {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.main-content {
+    padding: 0px 20px;
+    transition: margin-left 0.3s;
+}
+
+.sidebar-open .sidebar {
+    width: 250px; 
+}
+
+.sidebar-open .main-content {
+    margin-left: 250px; 
+}
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        position: absolute; 
+        left: 250px; 
+        top: 10px;
+        z-index: 2030;
+        transition: right 0.5s ease;
+
+      }
+      .sidebar-open .sidebar-toggle {
+        display: none;
+      }
+    .sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      height: 100%;
+      z-index: 1040;
+      transition: left 0.3s ease;
+    }
+  
+    .sidebar.open {
+      left: 0;
+    }
+  
+    .main-content {
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+  
+    .main-content.open {
+      margin-left: 0;
+    }
   }
-  
-  .main.open {
-    margin-left: 250px;
-  }
-  
-  
   

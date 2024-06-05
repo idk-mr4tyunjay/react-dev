@@ -1,10 +1,8 @@
-
-
-  
+/* Sidebar toggle button styling */
 .sidebar-toggle {
     position: absolute;
     top: 5px;
-    left: 300px;
+    left: 250px; /* Adjusted to match the sidebar width */
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -13,44 +11,53 @@
     border: none;
 }
 
+/* Remove outline on focus */
 .sidebar-toggle:focus {
     outline: none;
 }
-  
+
+/* Sidebar menu styling */
 .sidebar-menu {
     padding: 0;
     list-style: none;
 }
-  
+
+/* Sidebar item styling */
 .sidebar-item {
     padding: 10px;
 }
-  
+
+/* Sidebar link styling */
 .sidebar-link {
     color: #fff;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
-  
+
+/* Sidebar link hover effect */
 .sidebar-link:hover {
     color: #ccc;
 }
-  
+
+/* Sidebar bars icon styling */
 .sidebar-icon-bars {
     color: #000000;
     margin-top: 9px;
     font-size: 1.5rem;
 }
-  
+
+/* Sidebar right icon styling */
 .sidebar-icon-right {
     margin-left: auto;
 }
-  
+
+/* Sidebar text styling */
 .sidebar-text {
     flex-grow: 1;
 }
-  
+
+/* New label styling */
 .new-label {
     background-color: #F2125E;
     color: white;
@@ -59,18 +66,21 @@
     font-size: 0.75rem;
     margin-left: 10px;
 }
-  
+
+/* Search input styling */
 .search-input {
     background-color: transparent;
     border: 1px solid #ccc;
     color: #fff;
     padding-left: 10px;
 }
-  
+
+/* Search input placeholder styling */
 .search-input::placeholder {
     color: #ccc;
 }
-  
+
+/* Search button styling */
 .search-button {
     background: none;
     border: none;
@@ -81,41 +91,105 @@
     transform: translateY(-50%);
     cursor: pointer;
 }
-  
+
+/* Search icon styling */
 .search-icon {
     font-size: 1.2rem;
 }
 
-
+/* Wrapper styling for sidebar and main content */
 .wrapper {
     display: flex;
 }
+
 /* Sidebar styling */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Start with sidebar hidden */
     width: 250px;
     height: 100%;
     background-color: #1b1b29;
     color: #fff;
-    transition: all 0.3s ease;
-    z-index: 3;
-  }
-  
-  .sidebar.open {
-    left: 0;
-  }
-  
-  /* Main content styling */
-  .main {
+    transition: left 0.3s ease; /* Use left property for transition */
+    z-index: 1040;
+}
+
+.sidebar.open {
+    left: 0; /* Sidebar visible when open */
+}
+
+/* Main content styling */
+.main {
     margin-left: 0;
     transition: margin-left 0.3s ease;
+}
+
+.main.open {
+    margin-left: 250px; /* Shift content when sidebar is open */
+}
+
+/* Container for sidebar and main content using CSS Grid */
+.app-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    transition: all 0.3s;
+}
+
+/* Sidebar toggle button within the container */
+.sidebar-toggle {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Main content area */
+.main-content {
+    padding: 0px 20px;
+    transition: margin-left 0.3s;
+}
+
+/* Adjust sidebar width when open */
+.sidebar-open .sidebar {
+    width: 250px; /* Adjust as needed */
+}
+
+/* Adjust main content margin when sidebar is open */
+.sidebar-open .main-content {
+    margin-left: 250px; /* Should match the expanded sidebar width */
+}
+/* Overlap styles for small screens */
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        position: absolute; 
+        left: 250px; 
+        top: 10px;
+        z-index: 2030;
+        transition: right 0.5s ease;
+
+      }
+      .sidebar-open .sidebar-toggle {
+        display: none;
+      }
+    .sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      height: 100vh;
+      z-index: 1040;
+      transition: left 0.3s ease;
+    }
+  
+    .sidebar.open {
+      left: 0;
+    }
+  
+    .main-content {
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+  
+    .main-content.open {
+      margin-left: 0;
+    }
   }
-  
-  .main.open {
-    margin-left: 250px;
-  }
-  
-  
   

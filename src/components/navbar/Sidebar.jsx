@@ -9,23 +9,30 @@ import { GrPieChart } from "react-icons/gr";
 import { LiaTableSolid } from "react-icons/lia";
 import { VscSearch } from "react-icons/vsc";
 
-const Sidebar = () => {
+const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+  const closeSidebar = () => {
+    if (window.innerWidth < 768) {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  }
+  };
 
   return (
-    <div className={`wrapper ${isOpen ? "expand" : ""}`}>
+    <div className={`app-container ${isOpen ? "sidebar-open" : ""}`}>
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
-        <div className="bg-light py-3">
+        <div className="bg-light py-3 border-end">
           <button className="sidebar-toggle mb-2 mt-2" onClick={toggleSidebar}>
             <FaBars className="sidebar-icon-bars" />
           </button>
           <a className="navbar-brand px-2" href="#">
             <img src="./src/Assets/logo-mini.svg" alt="logo" />
-            <span className="px-2 text-decoration-none new-logo ">Celestial</span>{" "}
+            <span className="px-2 text-decoration-none new-logo">Celestial</span>
           </a>
         </div>
         <div className="container-fluid py-3">
@@ -46,7 +53,7 @@ const Sidebar = () => {
           <li className="sidebar-item bg-dashboard">
             <a href="#" className="sidebar-link">
               <HiComputerDesktop />
-              <span className="sidebar-text px-1 fw-bold ">Dashboard</span>
+              <span className="sidebar-text px-1 fw-bold">Dashboard</span>
               <span className="new-label">NEW</span>
             </a>
           </li>
@@ -80,8 +87,8 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-      <div className={`main ${isOpen ? "open" : ""}`}>
-        {/* Your main content here */}
+      <div className={`main-content ${isOpen ? "open" : ""}`} onClick={closeSidebar}>
+        {children}
       </div>
     </div>
   );

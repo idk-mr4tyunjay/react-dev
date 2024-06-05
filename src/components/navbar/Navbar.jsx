@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiMessage2Line } from "react-icons/ri";
 import { TiBell } from "react-icons/ti";
 import { FaRegUser } from "react-icons/fa6";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav className="navbar navbar-expand-lg bg-white w-100 py-3 d-flex justify-content-between">
       <div className="ps-5">
